@@ -1,0 +1,11 @@
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\ClienteForm.exe.config
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\ClienteForm.exe
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\ClienteForm.pdb
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\ClienteForm.xml
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.vbprojAssemblyReference.cache
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.Resources.resources
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.vbproj.GenerateResource.cache
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.vbproj.CoreCompileInputs.cache
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.exe
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.xml
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.pdb
