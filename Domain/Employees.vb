@@ -1,4 +1,4 @@
-Public Class Employees
+﻿Public Class Employees
     Public Property EmployeeID As String
     Public Property LastName As String
     Public Property FirstName As String

@@ -1,14 +1,4 @@
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\bin\Debug\netstandard2.0\Business.deps.json
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\bin\Debug\netstandard2.0\Business.dll
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\bin\Debug\netstandard2.0\Business.pdb
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\bin\Debug\netstandard2.0\DataAccess.dll
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\bin\Debug\netstandard2.0\Domain.dll
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\bin\Debug\netstandard2.0\DataAccess.pdb
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\bin\Debug\netstandard2.0\Domain.pdb
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\obj\Debug\netstandard2.0\Business.vbprojAssemblyReference.cache
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\obj\Debug\netstandard2.0\Business.AssemblyInfoInputs.cache
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\obj\Debug\netstandard2.0\Business.AssemblyInfo.vb
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\obj\Debug\netstandard2.0\Business.vbproj.CoreCompileInputs.cache
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\obj\Debug\netstandard2.0\Business.vbproj.CopyComplete
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\obj\Debug\netstandard2.0\Business.dll
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\obj\Debug\netstandard2.0\Business.pdb
