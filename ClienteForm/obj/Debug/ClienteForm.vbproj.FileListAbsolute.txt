@@ -9,3 +9,5 @@ C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteFo
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.exe
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.xml
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.pdb
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.formAdministrarEmpleado.resources
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForm.formSeleccionarEmpleado.resources
