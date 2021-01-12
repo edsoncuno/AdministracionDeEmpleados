@@ -14,3 +14,12 @@ C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteFo
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\System.Data.Common.dll
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\System.Data.SqlClient.dll
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\obj\Debug\ClienteForms.vbproj.CopyComplete
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\Business.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\Domain.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\DataAccess.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\Business.pdb
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\Business.xml
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\Domain.pdb
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\Domain.xml
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\DataAccess.pdb
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\ClienteForm\bin\Debug\DataAccess.xml

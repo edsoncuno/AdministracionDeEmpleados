@@ -1,4 +1,0 @@
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\bin\Debug\netstandard2.0\DataAccess.dll
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\bin\Debug\netstandard2.0\Domain.dll
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\obj\Debug\netstandard2.0\Business.AssemblyInfoInputs.cache
-C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Business\obj\Debug\netstandard2.0\Business.AssemblyInfo.vb

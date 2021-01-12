@@ -1,0 +1,9 @@
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\bin\Debug\Domain.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\bin\Debug\Domain.pdb
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\bin\Debug\Domain.xml
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.Resources.resources
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.vbproj.GenerateResource.cache
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.vbproj.CoreCompileInputs.cache
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.xml
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.pdb

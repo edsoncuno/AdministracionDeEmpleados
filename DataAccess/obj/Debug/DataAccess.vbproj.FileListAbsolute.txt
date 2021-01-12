@@ -1,0 +1,16 @@
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\bin\Debug\DataAccess.xml
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\bin\Debug\Domain.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\bin\Debug\System.Data.Common.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\bin\Debug\Domain.pdb
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\bin\Debug\Domain.xml
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\obj\Debug\DataAccess.vbprojAssemblyReference.cache
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\obj\Debug\DataAccess.Resources.resources
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\obj\Debug\DataAccess.vbproj.GenerateResource.cache
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\obj\Debug\DataAccess.vbproj.CoreCompileInputs.cache
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\obj\Debug\DataAccess.vbproj.CopyComplete
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\obj\Debug\DataAccess.xml
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\DataAccess\obj\Debug\DataAccess.pdb

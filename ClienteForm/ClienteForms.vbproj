@@ -135,5 +135,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.vbproj">
+      <Project>{55cf2315-3800-418c-9467-6bcdf90b7e96}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.vbproj">
+      <Project>{3aa78f03-7e25-4fd0-a283-8c10d9f3df28}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

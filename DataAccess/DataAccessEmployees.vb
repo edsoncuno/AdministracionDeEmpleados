@@ -1,4 +1,4 @@
-Imports System.Data
+﻿Imports System.Data
 Imports System.Data.SqlClient
 Imports Domain
 Public Class DataAccessEmployees
@@ -47,6 +47,8 @@ Public Class DataAccessEmployees
             objEmployees.Notes = Convert.ToString(objSqlDataReader("Notes"))
             objEmployees.ReportsTo = Convert.ToString(objSqlDataReader("ReportsTo"))
             objEmployees.PhotoPath = Convert.ToString(objSqlDataReader("PhotoPath"))
+        Else
+            objEmployees.EmployeeID = Nothing
         End If
         objSqlConnection.Close()
         Return objEmployees
@@ -59,18 +61,6 @@ Public Class DataAccessEmployees
         dtRegion.Load(objSqlDataReader)
         objSqlConnection.Close()
         Return dtRegion
-    End Function
-    Public Function selectRegionByRegionDescription(RegionDescription As String) As Region
-        Dim objSqlCommand As SqlCommand = New SqlCommand("select * from Region where RegionDescription = '" + RegionDescription + "'", objSqlConnection)
-        objSqlConnection.Open()
-        Dim objSqlDataReader As SqlDataReader = objSqlCommand.ExecuteReader()
-        Dim objRegion = New Region
-        If (objSqlDataReader.Read()) Then
-            objRegion.RegionID = Convert.ToString(objSqlDataReader("RegionID"))
-            objRegion.RegionDescription = Convert.ToString(objSqlDataReader("RegionDescription"))
-        End If
-        objSqlConnection.Close()
-        Return objRegion
     End Function
     Public Function selectTableTerritoriesByRegionID(RegionID As String)
         Dim objSqlCommand As SqlCommand = New SqlCommand("select * from Territories where RegionID =" + RegionID + "", objSqlConnection)
@@ -98,5 +88,93 @@ Public Class DataAccessEmployees
         objSqlConnection.Close()
         Return dtEmployeeTerritories
     End Function
+    Public Sub insertEmployees(objEmployees As Employees)
+        Dim objSqlCommand As SqlCommand = New SqlCommand(
+        "insert into Employees (LastName) values ('asd')", objSqlConnection)
+        objSqlConnection.Open()
+        objSqlCommand.ExecuteNonQuery()
+        objSqlConnection.Close()
+    End Sub
+    Public Sub updateEmployees(objEmployees As Employees)
+        Dim objSqlCommand As SqlCommand = New SqlCommand(
+        "update Employees set " +
+        "LastName = '" + objEmployees.LastName + "', " +
+        "FirstName = '" + objEmployees.FirstName + "', " +
+        "Title = '" + objEmployees.Title + "', " +
+        "TitleOfCourtesy = '" + objEmployees.TitleOfCourtesy + "', " +
+        "Address = '" + objEmployees.Address + "', " +
+        "City = '" + objEmployees.City + "', " +
+        "Region = '" + objEmployees.Region + "', " +
+        "PostalCode = '" + objEmployees.PostalCode + "', " +
+        "Country = '" + objEmployees.Country + "', " +
+        "HomePhone = '" + objEmployees.HomePhone + "', " +
+        "Extension = '" + objEmployees.Extension + "', " +
+        "Notes = '" + objEmployees.Notes + "', " +
+        "ReportsTo = " + objEmployees.ReportsTo + ", " +
+        "PhotoPath = '" + objEmployees.PhotoPath + "' " +
+        "where EmployeeID = " + objEmployees.EmployeeID + "", objSqlConnection)
+        objSqlConnection.Open()
+        objSqlCommand.ExecuteNonQuery()
+        objSqlConnection.Close()
+    End Sub
+    Public Sub deleteEmployeeTerritories(EmployeeID As String)
+        Dim objSqlCommand As SqlCommand = New SqlCommand(
+        "delete from EmployeeTerritories where EmployeeID = " + EmployeeID + "", objSqlConnection)
+        objSqlConnection.Open()
+        objSqlCommand.ExecuteNonQuery()
+        objSqlConnection.Close()
+    End Sub
+    Public Function selectRegionByRegionDescription(RegionDescription As String) As Region
+        Dim objSqlCommand As SqlCommand = New SqlCommand("select * from Region where RegionDescription = '" + RegionDescription + "'", objSqlConnection)
+        objSqlConnection.Open()
+        Dim objSqlDataReader As SqlDataReader = objSqlCommand.ExecuteReader()
+        Dim objRegion = New Region
+        If (objSqlDataReader.Read()) Then
+            objRegion.RegionID = Convert.ToString(objSqlDataReader("RegionID"))
+            objRegion.RegionDescription = Convert.ToString(objSqlDataReader("RegionDescription"))
+        Else
+            objRegion.RegionID = Nothing
+            objRegion.RegionDescription = Nothing
+        End If
+        objSqlConnection.Close()
+        Return objRegion
+    End Function
+    Public Function selectTerritoriesByRegionIDAndTerritoryDescription(RegionID As String, TerritoryDescription As String) As Territories
+        Dim objSqlCommand As SqlCommand = New SqlCommand(
+        "select * from Territories where RegionID = " + RegionID + " and TerritoryDescription = '" + TerritoryDescription + "'", objSqlConnection)
+        objSqlConnection.Open()
+        Dim objSqlDataReader As SqlDataReader = objSqlCommand.ExecuteReader()
+        Dim objTerritories = New Territories
+        If (objSqlDataReader.Read()) Then
+            objTerritories.TerritoryID = Convert.ToString(objSqlDataReader("TerritoryID"))
+            objTerritories.TerritoryDescription = Convert.ToString(objSqlDataReader("TerritoryDescription"))
+            objTerritories.RegionID = Convert.ToString(objSqlDataReader("RegionID"))
+        Else
+            objTerritories.TerritoryID = Nothing
+            objTerritories.TerritoryDescription = Nothing
+            objTerritories.RegionID = Nothing
+        End If
+        objSqlConnection.Close()
+        Return objTerritories
+    End Function
+    Public Sub insertEmployeeTerritories(EmployeeID As String, TerritoryID As String)
+        Dim objSqlCommand As SqlCommand = New SqlCommand(
+        "insert into EmployeeTerritories (EmployeeID, TerritoryID) values (" + EmployeeID + ",'" + TerritoryID + "')", objSqlConnection)
+        objSqlConnection.Open()
+        objSqlCommand.ExecuteNonQuery()
+        objSqlConnection.Close()
+    End Sub
+    Public Function deleteEmployeesByEmployeeID(EmployeeID As String) As String
+        Dim objSqlCommand As SqlCommand = New SqlCommand(
+        "delete from Employees where EmployeeID = " + EmployeeID + "", objSqlConnection)
+        objSqlConnection.Open()
+        Try
+            objSqlCommand.ExecuteNonQuery()
+            objSqlConnection.Close()
+            Return "Empleado eliminado"
+        Catch ex As Exception
+            objSqlConnection.Close()
+            Return "No se puedo eliminar al Empleado por que tiene Ordenes asociados"
+        End Try
+    End Function
 End Class
-

@@ -56,7 +56,7 @@ Partial Class formAdministrarEmpleado
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtEmpleadoPostalCode = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.btnEmpleadoReporstTo = New System.Windows.Forms.Button()
+        Me.btnEmpleadoReportsTo = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtEmpleadoPhotoPath = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -111,7 +111,8 @@ Partial Class formAdministrarEmpleado
         Me.lblReportarAEmployeeID = New System.Windows.Forms.Label()
         Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
-        Me.btnEliinar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvRegionTerritorios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbEmpleadoPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,7 +175,7 @@ Partial Class formAdministrarEmpleado
         Me.dgvRegionTerritorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegionTerritorios.Location = New System.Drawing.Point(692, 46)
         Me.dgvRegionTerritorios.Name = "dgvRegionTerritorios"
-        Me.dgvRegionTerritorios.Size = New System.Drawing.Size(240, 150)
+        Me.dgvRegionTerritorios.Size = New System.Drawing.Size(250, 150)
         Me.dgvRegionTerritorios.TabIndex = 6
         '
         'Label3
@@ -394,13 +395,13 @@ Partial Class formAdministrarEmpleado
         Me.Label16.TabIndex = 24
         Me.Label16.Text = "PostalCode:"
         '
-        'btnEmpleadoReporstTo
+        'btnEmpleadoReportsTo
         '
-        Me.btnEmpleadoReporstTo.Location = New System.Drawing.Point(346, 358)
-        Me.btnEmpleadoReporstTo.Name = "btnEmpleadoReporstTo"
-        Me.btnEmpleadoReporstTo.Size = New System.Drawing.Size(101, 20)
-        Me.btnEmpleadoReporstTo.TabIndex = 34
-        Me.btnEmpleadoReporstTo.UseVisualStyleBackColor = True
+        Me.btnEmpleadoReportsTo.Location = New System.Drawing.Point(346, 358)
+        Me.btnEmpleadoReportsTo.Name = "btnEmpleadoReportsTo"
+        Me.btnEmpleadoReportsTo.Size = New System.Drawing.Size(101, 20)
+        Me.btnEmpleadoReportsTo.TabIndex = 34
+        Me.btnEmpleadoReportsTo.UseVisualStyleBackColor = True
         '
         'Label17
         '
@@ -529,9 +530,9 @@ Partial Class formAdministrarEmpleado
         'dgvEmpleadoRegionTerritorios
         '
         Me.dgvEmpleadoRegionTerritorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEmpleadoRegionTerritorios.Location = New System.Drawing.Point(258, 584)
+        Me.dgvEmpleadoRegionTerritorios.Location = New System.Drawing.Point(230, 584)
         Me.dgvEmpleadoRegionTerritorios.Name = "dgvEmpleadoRegionTerritorios"
-        Me.dgvEmpleadoRegionTerritorios.Size = New System.Drawing.Size(240, 150)
+        Me.dgvEmpleadoRegionTerritorios.Size = New System.Drawing.Size(250, 150)
         Me.dgvEmpleadoRegionTerritorios.TabIndex = 51
         '
         'Label26
@@ -875,22 +876,32 @@ Partial Class formAdministrarEmpleado
         Me.btnActualizar.Text = "Actualizar"
         Me.btnActualizar.UseVisualStyleBackColor = True
         '
-        'btnEliinar
+        'btnEliminar
         '
-        Me.btnEliinar.Location = New System.Drawing.Point(588, 677)
-        Me.btnEliinar.Name = "btnEliinar"
-        Me.btnEliinar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEliinar.TabIndex = 108
-        Me.btnEliinar.Text = "Eliminar"
-        Me.btnEliinar.UseVisualStyleBackColor = True
+        Me.btnEliminar.Location = New System.Drawing.Point(588, 677)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 108
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(588, 591)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(75, 23)
+        Me.btnLimpiar.TabIndex = 109
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'formAdministrarEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(944, 749)
-        Me.Controls.Add(Me.btnEliinar)
+        Me.ClientSize = New System.Drawing.Size(972, 749)
+        Me.Controls.Add(Me.btnLimpiar)
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.lblReportarAEmployeeID)
@@ -945,7 +956,7 @@ Partial Class formAdministrarEmpleado
         Me.Controls.Add(Me.txtEmpleadoPhotoPath)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.btnEmpleadoReporstTo)
+        Me.Controls.Add(Me.btnEmpleadoReportsTo)
         Me.Controls.Add(Me.txtEmpleadoNotes)
         Me.Controls.Add(Me.txtEmpleadoExtension)
         Me.Controls.Add(Me.Label12)
@@ -1026,7 +1037,6 @@ Partial Class formAdministrarEmpleado
     Friend WithEvents Label15 As Label
     Friend WithEvents txtEmpleadoPostalCode As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents btnEmpleadoReporstTo As Button
     Friend WithEvents Label17 As Label
     Friend WithEvents txtEmpleadoPhotoPath As TextBox
     Friend WithEvents Label18 As Label
@@ -1081,5 +1091,7 @@ Partial Class formAdministrarEmpleado
     Friend WithEvents lblReportarAEmployeeID As Label
     Friend WithEvents btnRegistrar As Button
     Friend WithEvents btnActualizar As Button
-    Friend WithEvents btnEliinar As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnLimpiar As Button
+    Public WithEvents btnEmpleadoReportsTo As Button
 End Class

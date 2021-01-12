@@ -1,5 +1,4 @@
-Imports System.Data
-Imports Domain
+﻿Imports Domain
 Imports DataAccess
 Public Class BusinessEmployees
     Dim objDataAccessEmployees As DataAccessEmployees = New DataAccessEmployees()
@@ -38,4 +37,70 @@ Public Class BusinessEmployees
         Dim objDataTable = objDataAccessEmployees.selectTableEmployeeTerritoriesByEmployeeID(EmployeeID)
         Return objDataTable
     End Function
+    Public Function registrarEmpleado(objEmployees As Employees) As String
+        If esValido(objEmployees) = False Then
+            Return "Los datos del empeado no son validos"
+        End If
+        If existe(objEmployees) = True Then
+            Return "El empleado al que desea registrar ya existe"
+        End If
+        'objDataAccessEmployees.insertEmployees(objEmployees)
+        Return "El registro no funciona por alguna razon"
+    End Function
+    Public Function actualizarEmpleado(objEmployees As Employees, dtEmpleadoRegionTerritorios As DataTable) As String
+        If esValido(objEmployees) = False Then
+            Return "Los datos del empeado no son validos"
+        End If
+        If existe(objEmployees) = False Then
+            Return "El empleado al que desea hacer los cambios no existe"
+        End If
+        objDataAccessEmployees.updateEmployees(objEmployees)
+        actualizarRegionTerritorios(objEmployees, dtEmpleadoRegionTerritorios)
+        Return "Empleado Actualizado"
+    End Function
+    Private Function existe(objEmployees As Employees) As Boolean
+        objEmployees = objDataAccessEmployees.selectEmployeesByEmployeeID(objEmployees.EmployeeID)
+        If objEmployees.EmployeeID = Nothing Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
+    Private Function esValido(objEmployees As Employees) As Boolean
+        If objEmployees.EmployeeID = "" Then
+            Return False
+        End If
+        Try
+            Dim int As Integer = Convert.ToInt32(objEmployees.EmployeeID)
+        Catch ex As Exception
+            Return False
+        End Try
+        Return True
+    End Function
+    Private Sub actualizarRegionTerritorios(objEmployees As Employees, dtEmpleadoRegionTerritorios As DataTable)
+        limpiarRegionTerritorios(objEmployees.EmployeeID)
+        For index = 0 To dtEmpleadoRegionTerritorios.Rows.Count - 1
+            Dim dr As DataRow = dtEmpleadoRegionTerritorios.Rows.Item(index)
+            agregarTerritorio(objEmployees.EmployeeID, dr("RegionDescription").ToString, dr("TerritoryDescription").ToString)
+        Next
+    End Sub
+    Private Sub limpiarRegionTerritorios(EmployeeID As String)
+        objDataAccessEmployees.deleteEmployeeTerritories(EmployeeID)
+    End Sub
+    Public Sub agregarTerritorio(EmployeeID As String, RegionDescription As String, TerritoryDescription As String)
+        Dim objRegion As Region = objDataAccessEmployees.selectRegionByRegionDescription(RegionDescription)
+        Dim objTerritories As Territories = objDataAccessEmployees.selectTerritoriesByRegionIDAndTerritoryDescription(objRegion.RegionID, TerritoryDescription)
+        objDataAccessEmployees.insertEmployeeTerritories(EmployeeID, objTerritories.TerritoryID)
+    End Sub
+    Public Function eliminarEmpleado(objEmployees As Employees) As String
+        If esValido(objEmployees) = False Then
+            Return "Los datos del empeado no son validos"
+        End If
+        If existe(objEmployees) = False Then
+            Return "El empleado al que desea eliminar no existe"
+        End If
+        limpiarRegionTerritorios(objEmployees.EmployeeID)
+        Return objDataAccessEmployees.deleteEmployeesByEmployeeID(objEmployees.EmployeeID)
+    End Function
 End Class
+

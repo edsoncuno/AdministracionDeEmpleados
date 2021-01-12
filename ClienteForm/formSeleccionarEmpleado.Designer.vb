@@ -23,24 +23,24 @@ Partial Class formSeleccionarEmpleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.dgvRegionTerritorios = New System.Windows.Forms.DataGridView()
-        Me.dgvEmpleados = New System.Windows.Forms.DataGridView()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.txtFiltro = New System.Windows.Forms.TextBox()
-        Me.cmbFiltro = New System.Windows.Forms.ComboBox()
+        Me.dgvRegionTerritorios1 = New System.Windows.Forms.DataGridView()
+        Me.dgvEmpleados1 = New System.Windows.Forms.DataGridView()
+        Me.btnBuscar1 = New System.Windows.Forms.Button()
+        Me.txtFiltro1 = New System.Windows.Forms.TextBox()
+        Me.cmbFiltro1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblEmpleadoEmployeeID = New System.Windows.Forms.Label()
-        Me.lblEmpleadoLastName = New System.Windows.Forms.Label()
-        Me.lblEmpleadoFirstName = New System.Windows.Forms.Label()
-        Me.lblEmpleadoTitle = New System.Windows.Forms.Label()
+        Me.lblEmpleadoEmployeeID1 = New System.Windows.Forms.Label()
+        Me.lblEmpleadoLastName1 = New System.Windows.Forms.Label()
+        Me.lblEmpleadoFirstName1 = New System.Windows.Forms.Label()
+        Me.lblEmpleadoTitle1 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.btnSeleccionar = New System.Windows.Forms.Button()
-        CType(Me.dgvRegionTerritorios, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnSeleccionar1 = New System.Windows.Forms.Button()
+        CType(Me.dgvRegionTerritorios1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvEmpleados1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -52,45 +52,45 @@ Partial Class formSeleccionarEmpleado
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Region y Territorios:"
         '
-        'dgvRegionTerritorios
+        'dgvRegionTerritorios1
         '
-        Me.dgvRegionTerritorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRegionTerritorios.Location = New System.Drawing.Point(423, 46)
-        Me.dgvRegionTerritorios.Name = "dgvRegionTerritorios"
-        Me.dgvRegionTerritorios.Size = New System.Drawing.Size(240, 150)
-        Me.dgvRegionTerritorios.TabIndex = 14
+        Me.dgvRegionTerritorios1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRegionTerritorios1.Location = New System.Drawing.Point(423, 46)
+        Me.dgvRegionTerritorios1.Name = "dgvRegionTerritorios1"
+        Me.dgvRegionTerritorios1.Size = New System.Drawing.Size(240, 150)
+        Me.dgvRegionTerritorios1.TabIndex = 14
         '
-        'dgvEmpleados
+        'dgvEmpleados1
         '
-        Me.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEmpleados.Location = New System.Drawing.Point(12, 46)
-        Me.dgvEmpleados.Name = "dgvEmpleados"
-        Me.dgvEmpleados.Size = New System.Drawing.Size(405, 150)
-        Me.dgvEmpleados.TabIndex = 13
+        Me.dgvEmpleados1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEmpleados1.Location = New System.Drawing.Point(12, 46)
+        Me.dgvEmpleados1.Name = "dgvEmpleados1"
+        Me.dgvEmpleados1.Size = New System.Drawing.Size(405, 150)
+        Me.dgvEmpleados1.TabIndex = 13
         '
-        'btnBuscar
+        'btnBuscar1
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(283, 4)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 12
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
+        Me.btnBuscar1.Location = New System.Drawing.Point(283, 4)
+        Me.btnBuscar1.Name = "btnBuscar1"
+        Me.btnBuscar1.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar1.TabIndex = 12
+        Me.btnBuscar1.Text = "Buscar"
+        Me.btnBuscar1.UseVisualStyleBackColor = True
         '
-        'txtFiltro
+        'txtFiltro1
         '
-        Me.txtFiltro.Location = New System.Drawing.Point(177, 6)
-        Me.txtFiltro.Name = "txtFiltro"
-        Me.txtFiltro.Size = New System.Drawing.Size(100, 20)
-        Me.txtFiltro.TabIndex = 11
+        Me.txtFiltro1.Location = New System.Drawing.Point(177, 6)
+        Me.txtFiltro1.Name = "txtFiltro1"
+        Me.txtFiltro1.Size = New System.Drawing.Size(100, 20)
+        Me.txtFiltro1.TabIndex = 11
         '
-        'cmbFiltro
+        'cmbFiltro1
         '
-        Me.cmbFiltro.FormattingEnabled = True
-        Me.cmbFiltro.Location = New System.Drawing.Point(50, 6)
-        Me.cmbFiltro.Name = "cmbFiltro"
-        Me.cmbFiltro.Size = New System.Drawing.Size(121, 21)
-        Me.cmbFiltro.TabIndex = 10
+        Me.cmbFiltro1.FormattingEnabled = True
+        Me.cmbFiltro1.Location = New System.Drawing.Point(50, 6)
+        Me.cmbFiltro1.Name = "cmbFiltro1"
+        Me.cmbFiltro1.Size = New System.Drawing.Size(121, 21)
+        Me.cmbFiltro1.TabIndex = 10
         '
         'Label2
         '
@@ -110,41 +110,41 @@ Partial Class formSeleccionarEmpleado
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Filtro:"
         '
-        'lblEmpleadoEmployeeID
+        'lblEmpleadoEmployeeID1
         '
-        Me.lblEmpleadoEmployeeID.AutoSize = True
-        Me.lblEmpleadoEmployeeID.Location = New System.Drawing.Point(85, 199)
-        Me.lblEmpleadoEmployeeID.Name = "lblEmpleadoEmployeeID"
-        Me.lblEmpleadoEmployeeID.Size = New System.Drawing.Size(16, 13)
-        Me.lblEmpleadoEmployeeID.TabIndex = 113
-        Me.lblEmpleadoEmployeeID.Text = "..."
+        Me.lblEmpleadoEmployeeID1.AutoSize = True
+        Me.lblEmpleadoEmployeeID1.Location = New System.Drawing.Point(85, 199)
+        Me.lblEmpleadoEmployeeID1.Name = "lblEmpleadoEmployeeID1"
+        Me.lblEmpleadoEmployeeID1.Size = New System.Drawing.Size(16, 13)
+        Me.lblEmpleadoEmployeeID1.TabIndex = 113
+        Me.lblEmpleadoEmployeeID1.Text = "..."
         '
-        'lblEmpleadoLastName
+        'lblEmpleadoLastName1
         '
-        Me.lblEmpleadoLastName.AutoSize = True
-        Me.lblEmpleadoLastName.Location = New System.Drawing.Point(85, 225)
-        Me.lblEmpleadoLastName.Name = "lblEmpleadoLastName"
-        Me.lblEmpleadoLastName.Size = New System.Drawing.Size(16, 13)
-        Me.lblEmpleadoLastName.TabIndex = 112
-        Me.lblEmpleadoLastName.Text = "..."
+        Me.lblEmpleadoLastName1.AutoSize = True
+        Me.lblEmpleadoLastName1.Location = New System.Drawing.Point(85, 225)
+        Me.lblEmpleadoLastName1.Name = "lblEmpleadoLastName1"
+        Me.lblEmpleadoLastName1.Size = New System.Drawing.Size(16, 13)
+        Me.lblEmpleadoLastName1.TabIndex = 112
+        Me.lblEmpleadoLastName1.Text = "..."
         '
-        'lblEmpleadoFirstName
+        'lblEmpleadoFirstName1
         '
-        Me.lblEmpleadoFirstName.AutoSize = True
-        Me.lblEmpleadoFirstName.Location = New System.Drawing.Point(84, 251)
-        Me.lblEmpleadoFirstName.Name = "lblEmpleadoFirstName"
-        Me.lblEmpleadoFirstName.Size = New System.Drawing.Size(16, 13)
-        Me.lblEmpleadoFirstName.TabIndex = 111
-        Me.lblEmpleadoFirstName.Text = "..."
+        Me.lblEmpleadoFirstName1.AutoSize = True
+        Me.lblEmpleadoFirstName1.Location = New System.Drawing.Point(84, 251)
+        Me.lblEmpleadoFirstName1.Name = "lblEmpleadoFirstName1"
+        Me.lblEmpleadoFirstName1.Size = New System.Drawing.Size(16, 13)
+        Me.lblEmpleadoFirstName1.TabIndex = 111
+        Me.lblEmpleadoFirstName1.Text = "..."
         '
-        'lblEmpleadoTitle
+        'lblEmpleadoTitle1
         '
-        Me.lblEmpleadoTitle.AutoSize = True
-        Me.lblEmpleadoTitle.Location = New System.Drawing.Point(84, 277)
-        Me.lblEmpleadoTitle.Name = "lblEmpleadoTitle"
-        Me.lblEmpleadoTitle.Size = New System.Drawing.Size(16, 13)
-        Me.lblEmpleadoTitle.TabIndex = 110
-        Me.lblEmpleadoTitle.Text = "..."
+        Me.lblEmpleadoTitle1.AutoSize = True
+        Me.lblEmpleadoTitle1.Location = New System.Drawing.Point(84, 277)
+        Me.lblEmpleadoTitle1.Name = "lblEmpleadoTitle1"
+        Me.lblEmpleadoTitle1.Size = New System.Drawing.Size(16, 13)
+        Me.lblEmpleadoTitle1.TabIndex = 110
+        Me.lblEmpleadoTitle1.Text = "..."
         '
         'Label27
         '
@@ -182,61 +182,61 @@ Partial Class formSeleccionarEmpleado
         Me.Label30.TabIndex = 106
         Me.Label30.Text = "EmployeeID:"
         '
-        'btnSeleccionar
+        'btnSeleccionar1
         '
-        Me.btnSeleccionar.Location = New System.Drawing.Point(342, 267)
-        Me.btnSeleccionar.Name = "btnSeleccionar"
-        Me.btnSeleccionar.Size = New System.Drawing.Size(75, 23)
-        Me.btnSeleccionar.TabIndex = 114
-        Me.btnSeleccionar.Text = "Seleccionar"
-        Me.btnSeleccionar.UseVisualStyleBackColor = True
+        Me.btnSeleccionar1.Location = New System.Drawing.Point(342, 267)
+        Me.btnSeleccionar1.Name = "btnSeleccionar1"
+        Me.btnSeleccionar1.Size = New System.Drawing.Size(75, 23)
+        Me.btnSeleccionar1.TabIndex = 114
+        Me.btnSeleccionar1.Text = "Seleccionar"
+        Me.btnSeleccionar1.UseVisualStyleBackColor = True
         '
         'formSeleccionarEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(674, 306)
-        Me.Controls.Add(Me.btnSeleccionar)
-        Me.Controls.Add(Me.lblEmpleadoEmployeeID)
-        Me.Controls.Add(Me.lblEmpleadoLastName)
-        Me.Controls.Add(Me.lblEmpleadoFirstName)
-        Me.Controls.Add(Me.lblEmpleadoTitle)
+        Me.Controls.Add(Me.btnSeleccionar1)
+        Me.Controls.Add(Me.lblEmpleadoEmployeeID1)
+        Me.Controls.Add(Me.lblEmpleadoLastName1)
+        Me.Controls.Add(Me.lblEmpleadoFirstName1)
+        Me.Controls.Add(Me.lblEmpleadoTitle1)
         Me.Controls.Add(Me.Label27)
         Me.Controls.Add(Me.Label28)
         Me.Controls.Add(Me.Label29)
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.dgvRegionTerritorios)
-        Me.Controls.Add(Me.dgvEmpleados)
-        Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.txtFiltro)
-        Me.Controls.Add(Me.cmbFiltro)
+        Me.Controls.Add(Me.dgvRegionTerritorios1)
+        Me.Controls.Add(Me.dgvEmpleados1)
+        Me.Controls.Add(Me.btnBuscar1)
+        Me.Controls.Add(Me.txtFiltro1)
+        Me.Controls.Add(Me.cmbFiltro1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "formSeleccionarEmpleado"
         Me.Text = "Seleccionar Empleado"
-        CType(Me.dgvRegionTerritorios, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvRegionTerritorios1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEmpleados1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents dgvRegionTerritorios As DataGridView
-    Friend WithEvents dgvEmpleados As DataGridView
-    Friend WithEvents btnBuscar As Button
-    Friend WithEvents txtFiltro As TextBox
-    Friend WithEvents cmbFiltro As ComboBox
+    Friend WithEvents dgvRegionTerritorios1 As DataGridView
+    Friend WithEvents dgvEmpleados1 As DataGridView
+    Friend WithEvents btnBuscar1 As Button
+    Friend WithEvents txtFiltro1 As TextBox
+    Friend WithEvents cmbFiltro1 As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblEmpleadoEmployeeID As Label
-    Friend WithEvents lblEmpleadoLastName As Label
-    Friend WithEvents lblEmpleadoFirstName As Label
-    Friend WithEvents lblEmpleadoTitle As Label
+    Friend WithEvents lblEmpleadoEmployeeID1 As Label
+    Friend WithEvents lblEmpleadoLastName1 As Label
+    Friend WithEvents lblEmpleadoFirstName1 As Label
+    Friend WithEvents lblEmpleadoTitle1 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
-    Friend WithEvents btnSeleccionar As Button
+    Friend WithEvents btnSeleccionar1 As Button
 End Class
