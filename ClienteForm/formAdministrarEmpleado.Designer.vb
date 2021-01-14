@@ -32,7 +32,6 @@ Partial Class formAdministrarEmpleado
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtEmpleadoEmployeeID = New System.Windows.Forms.TextBox()
         Me.txtEmpleadoLastName = New System.Windows.Forms.TextBox()
         Me.txtEmpleadoTitle = New System.Windows.Forms.TextBox()
         Me.txtEmpleadoFirstName = New System.Windows.Forms.TextBox()
@@ -113,6 +112,7 @@ Partial Class formAdministrarEmpleado
         Me.btnActualizar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.lblEmpleadoEmployeeID = New System.Windows.Forms.Label()
         CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvRegionTerritorios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbEmpleadoPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -204,13 +204,6 @@ Partial Class formAdministrarEmpleado
         Me.Label5.Size = New System.Drawing.Size(58, 13)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "LastName:"
-        '
-        'txtEmpleadoEmployeeID
-        '
-        Me.txtEmpleadoEmployeeID.Location = New System.Drawing.Point(100, 202)
-        Me.txtEmpleadoEmployeeID.Name = "txtEmpleadoEmployeeID"
-        Me.txtEmpleadoEmployeeID.Size = New System.Drawing.Size(100, 20)
-        Me.txtEmpleadoEmployeeID.TabIndex = 10
         '
         'txtEmpleadoLastName
         '
@@ -894,12 +887,22 @@ Partial Class formAdministrarEmpleado
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
+        'lblEmpleadoEmployeeID
+        '
+        Me.lblEmpleadoEmployeeID.AutoSize = True
+        Me.lblEmpleadoEmployeeID.Location = New System.Drawing.Point(100, 205)
+        Me.lblEmpleadoEmployeeID.Name = "lblEmpleadoEmployeeID"
+        Me.lblEmpleadoEmployeeID.Size = New System.Drawing.Size(16, 13)
+        Me.lblEmpleadoEmployeeID.TabIndex = 110
+        Me.lblEmpleadoEmployeeID.Text = "..."
+        '
         'formAdministrarEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(972, 749)
+        Me.Controls.Add(Me.lblEmpleadoEmployeeID)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnActualizar)
@@ -980,7 +983,6 @@ Partial Class formAdministrarEmpleado
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtEmpleadoLastName)
-        Me.Controls.Add(Me.txtEmpleadoEmployeeID)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -1013,7 +1015,6 @@ Partial Class formAdministrarEmpleado
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtEmpleadoEmployeeID As TextBox
     Friend WithEvents txtEmpleadoLastName As TextBox
     Friend WithEvents txtEmpleadoTitle As TextBox
     Friend WithEvents txtEmpleadoFirstName As TextBox
@@ -1094,4 +1095,5 @@ Partial Class formAdministrarEmpleado
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnLimpiar As Button
     Public WithEvents btnEmpleadoReportsTo As Button
+    Friend WithEvents lblEmpleadoEmployeeID As Label
 End Class

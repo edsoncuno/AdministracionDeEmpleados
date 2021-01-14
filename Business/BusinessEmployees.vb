@@ -37,17 +37,21 @@ Public Class BusinessEmployees
         Dim objDataTable = objDataAccessEmployees.selectTableEmployeeTerritoriesByEmployeeID(EmployeeID)
         Return objDataTable
     End Function
-    Public Function registrarEmpleado(objEmployees As Employees) As String
+    Public Function registrarEmpleado(objEmployees As Employees, dtEmpleadoRegionTerritorios As DataTable) As String
+        If objEmployees.ReportsTo = "" Then
+            objEmployees.ReportsTo = "null"
+        End If
         If esValido(objEmployees) = False Then
             Return "Los datos del empeado no son validos"
         End If
-        If existe(objEmployees) = True Then
-            Return "El empleado al que desea registrar ya existe"
-        End If
-        'objDataAccessEmployees.insertEmployees(objEmployees)
-        Return "El registro no funciona por alguna razon"
+        objEmployees.EmployeeID = objDataAccessEmployees.insertEmployees(objEmployees)
+        actualizarRegionTerritorios(objEmployees, dtEmpleadoRegionTerritorios)
+        Return "Empleado registrado"
     End Function
     Public Function actualizarEmpleado(objEmployees As Employees, dtEmpleadoRegionTerritorios As DataTable) As String
+        If objEmployees.ReportsTo = "" Then
+            objEmployees.ReportsTo = "null"
+        End If
         If esValido(objEmployees) = False Then
             Return "Los datos del empeado no son validos"
         End If
@@ -67,14 +71,12 @@ Public Class BusinessEmployees
         End If
     End Function
     Private Function esValido(objEmployees As Employees) As Boolean
-        If objEmployees.EmployeeID = "" Then
+        If objEmployees.LastName = "" Then
             Return False
         End If
-        Try
-            Dim int As Integer = Convert.ToInt32(objEmployees.EmployeeID)
-        Catch ex As Exception
+        If objEmployees.FirstName = "" Then
             Return False
-        End Try
+        End If
         Return True
     End Function
     Private Sub actualizarRegionTerritorios(objEmployees As Employees, dtEmpleadoRegionTerritorios As DataTable)

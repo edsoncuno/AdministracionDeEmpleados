@@ -4,8 +4,8 @@
     Public Property FirstName As String
     Public Property Title As String
     Public Property TitleOfCourtesy As String
-    Public Property BirthDate As DateTime
-    Public Property HireDate As DateTime
+    Public Property BirthDate As String
+    Public Property HireDate As String
     Public Property Address As String
     Public Property City As String
     Public Property Region As String

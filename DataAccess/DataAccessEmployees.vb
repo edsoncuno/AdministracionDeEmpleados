@@ -33,8 +33,16 @@ Public Class DataAccessEmployees
             objEmployees.FirstName = Convert.ToString(objSqlDataReader("FirstName"))
             objEmployees.Title = Convert.ToString(objSqlDataReader("Title"))
             objEmployees.TitleOfCourtesy = Convert.ToString(objSqlDataReader("TitleOfCourtesy"))
-            objEmployees.BirthDate = Convert.ToDateTime(objSqlDataReader("BirthDate"))
-            objEmployees.HireDate = Convert.ToDateTime(objSqlDataReader("HireDate"))
+            Try
+                objEmployees.BirthDate = convertirDateTimeAString(Convert.ToDateTime(objSqlDataReader("BirthDate")))
+            Catch ex As Exception
+                objEmployees.BirthDate = Nothing
+            End Try
+            Try
+                objEmployees.HireDate = convertirDateTimeAString(Convert.ToDateTime(objSqlDataReader("HireDate")))
+            Catch ex As Exception
+                objEmployees.HireDate = Nothing
+            End Try
             objEmployees.Address = Convert.ToString(objSqlDataReader("Address"))
             objEmployees.City = Convert.ToString(objSqlDataReader("City"))
             objEmployees.Region = Convert.ToString(objSqlDataReader("Region"))
@@ -43,7 +51,13 @@ Public Class DataAccessEmployees
             objEmployees.Country = Convert.ToString(objSqlDataReader("Country"))
             objEmployees.HomePhone = Convert.ToString(objSqlDataReader("HomePhone"))
             objEmployees.Extension = Convert.ToString(objSqlDataReader("Extension"))
-            objEmployees.Photo = CType(objSqlDataReader("Photo"), Byte())
+            Try
+                objEmployees.Photo = CType(objSqlDataReader("Photo"), Byte())
+            Catch ex As Exception
+
+                Dim arrayByte As Byte() = New Byte() {}
+                objEmployees.Photo = arrayByte
+            End Try
             objEmployees.Notes = Convert.ToString(objSqlDataReader("Notes"))
             objEmployees.ReportsTo = Convert.ToString(objSqlDataReader("ReportsTo"))
             objEmployees.PhotoPath = Convert.ToString(objSqlDataReader("PhotoPath"))
@@ -88,13 +102,31 @@ Public Class DataAccessEmployees
         objSqlConnection.Close()
         Return dtEmployeeTerritories
     End Function
-    Public Sub insertEmployees(objEmployees As Employees)
+    Public Function insertEmployees(objEmployees As Employees) As String
         Dim objSqlCommand As SqlCommand = New SqlCommand(
-        "insert into Employees (LastName) values ('asd')", objSqlConnection)
+        "insert into Employees (LastName,FirstName,Title,TitleOfCourtesy,BirthDate,HireDate,Address,City,Region,PostalCode,Country,HomePhone,Extension," +
+        "Notes,ReportsTo,PhotoPath) values (" +
+        "'" + objEmployees.LastName + "'" +
+        ",'" + objEmployees.FirstName + "'" +
+        ",'" + objEmployees.Title + "'" +
+        ",'" + objEmployees.TitleOfCourtesy + "'" +
+        "," + agregarInstruccionesAFecha(objEmployees.BirthDate) + "" +
+        "," + agregarInstruccionesAFecha(objEmployees.HireDate) + "" +
+        ",'" + objEmployees.Address + "'" +
+        ",'" + objEmployees.City + "'" +
+        ",'" + objEmployees.Region + "'" +
+        ",'" + objEmployees.PostalCode + "'" +
+        ",'" + objEmployees.Country + "'" +
+        ",'" + objEmployees.HomePhone + "'" +
+        ",'" + objEmployees.Extension + "'" +
+        ",'" + objEmployees.Notes + "'" +
+        "," + objEmployees.ReportsTo + "" +
+        ",'" + objEmployees.PhotoPath + "')", objSqlConnection)
         objSqlConnection.Open()
         objSqlCommand.ExecuteNonQuery()
         objSqlConnection.Close()
-    End Sub
+        Return selectLastEmployeeID()
+    End Function
     Public Sub updateEmployees(objEmployees As Employees)
         Dim objSqlCommand As SqlCommand = New SqlCommand(
         "update Employees set " +
@@ -176,5 +208,28 @@ Public Class DataAccessEmployees
             objSqlConnection.Close()
             Return "No se puedo eliminar al Empleado por que tiene Ordenes asociados"
         End Try
+    End Function
+    Private Function selectLastEmployeeID() As String
+        Dim objSqlCommand As SqlCommand = New SqlCommand("select MAX(EmployeeID) as EmployeeID from Employees", objSqlConnection)
+        Dim objString As String = ""
+        objSqlConnection.Open()
+        objString = Convert.ToString(objSqlCommand.ExecuteScalar())
+        objSqlConnection.Close()
+        Return objString
+    End Function
+    Public Function agregarInstruccionesAFecha(objString As String) As String
+        Dim resultado As String = "convert(datetime,'"
+        resultado = resultado + objString
+        resultado = resultado + "',20)"
+        Return resultado
+    End Function
+    Private Function agregarUnCeroAlNumeroMenorADiez(numero As String) As String
+        If numero.Length = 1 Then
+            numero = "0" + numero
+        End If
+        Return numero
+    End Function
+    Private Function convertirDateTimeAString(objDateTime As DateTime) As String
+        Return objDateTime.Year.ToString + "-" + agregarUnCeroAlNumeroMenorADiez(objDateTime.Month.ToString) + "-" + agregarUnCeroAlNumeroMenorADiez(objDateTime.Day.ToString)
     End Function
 End Class

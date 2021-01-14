@@ -9,17 +9,20 @@ Public Class formAdministrarEmpleado
     End Sub
     Private Sub inicializar()
         dgvEmpleados.DataSource = objBusinessEmployees.mostrarEmpleados
+        Dim now As DateTime = Date.Now
         mcEmpleadoBirthDate.ShowToday = False
+        mcEmpleadoBirthDate.SetDate(now)
         mcEmpleadoHireDate.ShowToday = False
+        mcEmpleadoHireDate.SetDate(now)
         llenarCmbFiltros(cmbFiltro)
         txtFiltro.Text = ""
-        txtEmpleadoEmployeeID.Text = ""
+        lblEmpleadoEmployeeID.Text = ""
         txtEmpleadoLastName.Text = ""
         txtEmpleadoFirstName.Text = ""
         txtEmpleadoTitle.Text = ""
         txtEmpleadoTitleOfCourtesy.Text = ""
-        mcEmpleadoBirthDate.SetDate(Nothing)
-        mcEmpleadoHireDate.SetDate(Nothing)
+        mcEmpleadoBirthDate.SetDate(Date.Now)
+        mcEmpleadoHireDate.SetDate(Date.Now)
         txtEmpleadoAddress.Text = ""
         txtEmpleadoCity.Text = ""
         txtEmpleadoRegion.Text = ""
@@ -101,13 +104,13 @@ Public Class formAdministrarEmpleado
         End If
     End Sub
     Private Sub mostarDatosDeEmpleado(objEmployees As Employees)
-        txtEmpleadoEmployeeID.Text = objEmployees.EmployeeID
+        lblEmpleadoEmployeeID.Text = objEmployees.EmployeeID
         txtEmpleadoLastName.Text = objEmployees.LastName
         txtEmpleadoFirstName.Text = objEmployees.FirstName
         txtEmpleadoTitle.Text = objEmployees.Title
         txtEmpleadoTitleOfCourtesy.Text = objEmployees.TitleOfCourtesy
-        mcEmpleadoBirthDate.SetDate(objEmployees.BirthDate)
-        mcEmpleadoHireDate.SetDate(objEmployees.HireDate)
+        mcEmpleadoBirthDate.SetDate(convertirStringADateTime(objEmployees.BirthDate))
+        mcEmpleadoHireDate.SetDate(convertirStringADateTime(objEmployees.HireDate))
         txtEmpleadoAddress.Text = objEmployees.Address
         txtEmpleadoCity.Text = objEmployees.City
         txtEmpleadoRegion.Text = objEmployees.Region
@@ -205,34 +208,45 @@ Public Class formAdministrarEmpleado
     Private Sub actualizarEmpleadoRegionTerritorios()
         dgvEmpleadoRegionTerritorios.DataSource = dtEmpleadoRegionTerritorios
     End Sub
-
-    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-        inicializar()
-    End Sub
-
-    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-        obtenerDatosDeEmpleado()
-        MessageBox.Show(objBusinessEmployees.registrarEmpleado(empleado))
-        inicializar()
-    End Sub
+    Private Function convertirStringADateTime(objString As String) As DateTime
+        Return Date.ParseExact(objString, "yyyy-MM-dd", System.Globalization.DateTimeFormatInfo.InvariantInfo)
+    End Function
+    Private Function convertirDateTimeAString(objDateTime As DateTime) As String
+        Return objDateTime.Year.ToString + "-" + agregarUnCeroAlNumeroMenorADiez(objDateTime.Month.ToString) + "-" + agregarUnCeroAlNumeroMenorADiez(objDateTime.Day.ToString)
+    End Function
+    Private Function agregarUnCeroAlNumeroMenorADiez(numero As String) As String
+        If numero.Length = 1 Then
+            numero = "0" + numero
+        End If
+        Return numero
+    End Function
     Private Sub obtenerDatosDeEmpleado()
-        empleado.EmployeeID = txtEmpleadoEmployeeID.Text
+        empleado.EmployeeID = lblEmpleadoEmployeeID.Text
         empleado.LastName = txtEmpleadoLastName.Text
         empleado.FirstName = txtEmpleadoFirstName.Text
         empleado.Title = txtEmpleadoTitle.Text
         empleado.TitleOfCourtesy = txtEmpleadoTitleOfCourtesy.Text
+        empleado.BirthDate = convertirDateTimeAString(Convert.ToDateTime(mcEmpleadoBirthDate.SelectionRange.Start.ToUniversalTime()))
+        empleado.HireDate = convertirDateTimeAString(Convert.ToDateTime(mcEmpleadoHireDate.SelectionRange.Start.ToUniversalTime()))
         empleado.Address = txtEmpleadoAddress.Text
         empleado.City = txtEmpleadoCity.Text
         empleado.Region = txtEmpleadoRegion.Text
         empleado.PostalCode = txtEmpleadoPostalCode.Text
         empleado.Country = txtEmpleadoCountry.Text
         empleado.HomePhone = txtEmpleadoHomePhone.Text
-        empleado.HomePhone = txtEmpleadoExtension.Text
+        empleado.Extension = txtEmpleadoExtension.Text
         empleado.Notes = txtEmpleadoNotes.Text
         empleado.ReportsTo = btnEmpleadoReportsTo.Text
         empleado.PhotoPath = txtEmpleadoPhotoPath.Text
     End Sub
-
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        inicializar()
+    End Sub
+    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+        obtenerDatosDeEmpleado()
+        MessageBox.Show(objBusinessEmployees.registrarEmpleado(empleado, dtEmpleadoRegionTerritorios))
+        inicializar()
+    End Sub
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         obtenerDatosDeEmpleado()
         MessageBox.Show(objBusinessEmployees.actualizarEmpleado(empleado, dtEmpleadoRegionTerritorios))

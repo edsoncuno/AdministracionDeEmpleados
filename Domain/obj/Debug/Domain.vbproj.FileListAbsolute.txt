@@ -7,3 +7,4 @@ C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\ob
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.dll
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.xml
 C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.pdb
+C:\Users\Edson\Downloads\Edson\Visual Studio\AdministracionDeEmpleados\Domain\obj\Debug\Domain.vbprojAssemblyReference.cache
